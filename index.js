@@ -59,8 +59,16 @@ const writeTranslate = async (localeList, retry = 0) => {
       messages: [
         {
           role: 'user',
-          content: `Translate to locale ${localeList.join(' ')} and format to JS object with key is locale and value has the format similar to input ${jsonString}`
-        }
+          content: `
+            Translate to locale ${localeList.join(' ')} and format to JS object with key as locale and value similar to input ${jsonString}. 
+            Before translation, recognize and expand common abbreviations in business and finance terms, such as:
+            - "PO number" → "Purchase Order number"
+            - "Qty" → "Quantity"
+            - "SKU" → "Stock Keeping Unit"
+            - "Price Excl Tax" → "Price Exclude Tax"
+            Ensure the expanded terms are translated correctly while keeping technical terms accurate.
+          `,
+        },
       ],
       model: process.env.MODEL,
     });

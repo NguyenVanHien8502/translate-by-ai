@@ -22,7 +22,7 @@
         "totalLabel": "Total",
         "unitPriceLabel": "Unit price",
         "priceLabel": "Price",
-        "priceExcludeTaxLabel": "Price Exc Tax",
+        "priceExcludeTaxLabel": "Price Excl Tax",
         "taxLabel": "Tax",
         "taxAmountLabel": "Tax Amount",
         "discountLabel": "Discount",
